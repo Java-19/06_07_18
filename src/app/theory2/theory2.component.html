@@ -1,0 +1,16 @@
+
+<p *ngIf="isVisible; else scnP">Paragraph One</p>
+<ng-template #scnP>
+<p>Paragraph Two</p>
+</ng-template>
+<button class="btn btn-primary" (click)="switchParagraph()">Switch</button>
+<hr>
+<button class="btn btn-primary" (click)="addName()">Add name</button>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let name of arr; let i = index"
+      [ngStyle] = "{backgroundColor:(i) % 2 === 0 ? '#d87700':'#001dc4','color':'white'}"
+      [ngClass] = "{'big-text':(i)%2===0}">
+    {{i}} - {{name.id}} - {{name.name}}
+  </li>
+
+</ul>

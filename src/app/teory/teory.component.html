@@ -1,0 +1,9 @@
+<input type="text" class="form-control" (input)="changeText($event)">
+<input type="text" class="form-control"
+       #myInput (input)="changeText1(myInput.value)">
+<input type="text" class="form-control"
+       #myInput1 (keyup.enter)="changeText1(myInput1.value)">
+<input type="text" class="form-control" [(ngModel)] = "str">
+<p>{{str}}</p>
+<button [disabled] = "isDisabled" class="btn btn-primary">My button</button>
+<button class="btn btn-dark" (click)="printLog('Button clicked')">My Second Button</button>
